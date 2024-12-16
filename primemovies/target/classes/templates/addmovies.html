@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Movies - PrimeMovies.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-container {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #FFD700;
+            margin-bottom: 30px;
+        }
+
+        .form-label {
+            color: #FFD700;
+        }
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid #FFD700;
+        }
+
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+            border-color: #FFD700;
+        }
+
+        .form-select {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid #FFD700;
+        }
+
+        .form-select:focus {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 0 0.25rem rgba(255, 215, 0, 0.25);
+            border-color: #FFD700;
+        }
+
+        .btn-primary {
+            background-color: #FFD700;
+            border-color: #FFD700;
+            color: #141e30;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #FFD700;
+            opacity: 0.8;
+        }
+		option{
+			background-color: #141e30;
+			color: white;
+		}
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Add a New Movie</h1>
+        <form action="add-movies" method="post">
+            <div class="mb-3">
+                <label for="moviename" class="form-label">Movie Name:</label>
+                <input type="text" class="form-control" id="moviename" name="moviename" required>
+            </div>
+            <div class="mb-3">
+                <label for="movieLink" class="form-label">Movie Link:</label>
+                <input type="text" class="form-control" id="movieLink" name="movieLink" required>
+            </div>
+            <div class="mb-3">
+                <label for="movieGenre" class="form-label">Movie Genre:</label>
+                <select class="form-select" id="movieGenre" name="movieGenre" required>
+                    <option value="Sci-fi">Sci-fi</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Drama">Drama</option>
+					<option value="Action">Action</option>
+					<option value="Religious">Religious</option>
+					<option value="text">custom</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="movieCast" class="form-label">Movie Cast:</label>
+                <input type="text" class="form-control" id="movieCast" name="movieCast" required>
+            </div>
+            <div class="mb-3">
+                <label for="movieDirector" class="form-label">Movie Director:</label>
+                <input type="text" class="form-control" id="movieDirector" name="movieDirector" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Add Movie</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
